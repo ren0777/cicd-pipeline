@@ -2,17 +2,11 @@ pipeline {
     agent any
 
     environment {
-        DOCKER_HUB = "faizan789"
+        DOCKER_HUB = "your-dockerhub-username"
         IMAGE_NAME = "devops-app"
     }
 
     stages {
-
-        stage('Clone Code') {
-            steps {
-                git 'https://github.com/ren0777/cicd-pipeline.git'
-            }
-        }
 
         stage('Build Image') {
             steps {
